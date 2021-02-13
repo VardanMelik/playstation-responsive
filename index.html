@@ -15,7 +15,7 @@
             <img class="logo" src="./assets/logo.png" alt="">
 
             <nav>
-                <ul>
+                <ul id="menu__list">
                     <li><a href="#">Game Controllers</a></li>
                     <li><a href="#">VR Accessories</a></li>
                     <li><a href="#">Media Remotes</a></li>
@@ -23,7 +23,7 @@
                 </ul>
             </nav>
 
-            <img class="menu__icon" src="./assets/menu.png" alt="">
+            <img class="menu__icon" src="./assets/menu.png" onclick="toggleMenu()" alt="">
         </div>
 
         <div class="row">
@@ -59,7 +59,18 @@
         </div>
 
     </div>
+    <script>
+        const menuList = document.getElementById('menu__list')
+        menuList.style.maxHeight = "0px";
 
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            } else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
 </body>
 
 </html>
